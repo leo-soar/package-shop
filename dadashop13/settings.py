@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
+    'user',
+    'dtoken',
+
 ]
 
 MIDDLEWARE = [
@@ -147,3 +150,5 @@ CORS_ALLOW_HEADERS = (
     'x-csrftoken',
     'x-requested-with',
 )
+
+JWT_TOKEN_KEY = '1234567'
