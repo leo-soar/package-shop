@@ -1,16 +1,14 @@
 import hashlib
 import json
 import time
-
 import jwt
 from django.conf import settings
 from django.http import JsonResponse
 from django.shortcuts import render
+from django.views import View
+from user.models import UserProfile
 
 # Create your views here.
-from django.views import View
-
-from user.models import UserProfile
 
 
 class Tokens(View):

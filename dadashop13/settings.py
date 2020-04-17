@@ -152,3 +152,27 @@ CORS_ALLOW_HEADERS = (
 )
 
 JWT_TOKEN_KEY = '1234567'
+
+
+# 使用redis配置
+CACHES = {
+    "default": {
+            "BACKEND": "django_redis.cache.RedisCache",
+            "LOCATION": "redis://127.0.0.1:6379/10",   #默认0库
+            "OPTIONS": {
+                "CLIENT_CLASS": "django_redis.client.DefaultClient", #用pyredis 链接redis
+            }
+        }
+}
+
+
+
+# 发送邮件设置
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # 固定写法
+EMAIL_HOST = 'smtp.qq.com' 					# 腾讯QQ邮箱 SMTP 服务器地址
+EMAIL_PORT = 25  							# SMTP服务的端口号
+EMAIL_HOST_USER = '453803337@qq.com'  			# 发送邮件的QQ邮箱
+EMAIL_HOST_PASSWORD = 'bhqhkhljewribiif'
+
+
+APPEND_SLASH = False

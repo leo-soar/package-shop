@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-from dadashop13.tools.models import BaseModel
+from tools.models import BaseModel
 
 
 class UserProfile(BaseModel):
@@ -10,7 +10,7 @@ class UserProfile(BaseModel):
     password = models.CharField(max_length=32,verbose_name='密码')
     email = models.EmailField()
     phone = models.CharField(max_length=11)
-    is_avtive = models.BooleanField(default=False,verbose_name='激活状态')
+    is_active = models.BooleanField(default=False,verbose_name='激活状态')
 
     class Meta:
         db_table = 'user_user_profile'
